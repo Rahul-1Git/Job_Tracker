@@ -31,7 +31,7 @@ function Update() {
       const token = localStorage.getItem("token"); // Get the JWT token from localStorage
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/getJob/${id}`,
+          `https://job-tracker-kappa-vert.vercel.app/api/getJob/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`, // Send token in headers for authentication
@@ -53,7 +53,7 @@ function Update() {
     const token = localStorage.getItem("token"); // Get the JWT token from localStorage
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/updateJob/${id}`,
+        `https://job-tracker-kappa-vert.vercel.app/api/updateJob/${id}`,
         update,
         {
           headers: {

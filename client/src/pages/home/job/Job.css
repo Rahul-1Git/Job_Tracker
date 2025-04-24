@@ -1,0 +1,117 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 90%;
+  height: 80px;
+}
+.header > select {
+  height: 30px;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(116, 210, 213);
+  color: black;
+}
+.job_list {
+  display: flex;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.alljob {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 10px;
+}
+
+.item {
+  background-color: rgb(84, 146, 148);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 16px;
+  color: aliceblue;
+}
+
+b {
+  font-weight: bold;
+  color: #333;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.edit {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.edit button {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.edit button:nth-child(2) {
+  background-color: #dc3545;
+}
+
+.edit button:nth-child(2):hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .alljob {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .alljob {
+    grid-template-columns: 1fr;
+  }
+}

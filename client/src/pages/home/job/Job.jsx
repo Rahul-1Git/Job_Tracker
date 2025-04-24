@@ -11,7 +11,7 @@ function Job() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("http://localhost:4000/api/getAllJob", {
+      const response = await axios.get("https://job-tracker-kappa-vert.vercel.app/api/getAllJob", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

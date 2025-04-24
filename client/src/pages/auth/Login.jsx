@@ -30,7 +30,7 @@ function Login({ setAuthenticated }) {
     }
 
     try {
-      const response = await axios.post("http://localhost:4000/auth/login", {
+      const response = await axios.post("https://job-tracker-kappa-vert.vercel.app/auth/login", {
         email,
         password,
       });

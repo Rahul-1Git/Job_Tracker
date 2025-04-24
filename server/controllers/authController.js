@@ -22,6 +22,8 @@ const signup = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       message: "internal server error",
+       error: error.message,     // Shows the error message
+       stack: error.stack, 
       success: false,
     });
   }
@@ -61,6 +63,8 @@ const login = async (req, res) => {
     res.status(500).json({
       message: "internal server error",
       success: false,
+       error: error.message,     // Shows the error message
+      stack: error.stack, 
     });
   }
 };

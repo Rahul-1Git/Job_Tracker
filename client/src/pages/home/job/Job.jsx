@@ -25,7 +25,7 @@ function Job() {
     try {
       const token = localStorage.getItem("token"); // Fetch token from localStorage
       const response = await axios.delete(
-        `http://localhost:4000/api/deleteJob/${jobId}`,
+        `https://job-tracker-kappa-vert.vercel.app/api/deleteJob/${jobId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`, // Include token in the Authorization header
